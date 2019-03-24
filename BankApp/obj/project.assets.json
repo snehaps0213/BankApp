@@ -673,11 +673,11 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\Git\\BankApp\\BankApp\\BankApp.csproj",
+      "projectUniqueName": "D:\\Sneha\\Git\\BankApp\\BankApp\\BankApp.csproj",
       "projectName": "BankApp",
-      "projectPath": "D:\\Git\\BankApp\\BankApp\\BankApp.csproj",
+      "projectPath": "D:\\Sneha\\Git\\BankApp\\BankApp\\BankApp.csproj",
       "packagesPath": "C:\\Users\\Sneha\\.nuget\\packages\\",
-      "outputPath": "D:\\Git\\BankApp\\BankApp\\obj\\",
+      "outputPath": "D:\\Sneha\\Git\\BankApp\\BankApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
