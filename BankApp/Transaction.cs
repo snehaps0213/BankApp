@@ -4,12 +4,12 @@ using System.Text;
 
 namespace BankApp
 {
-    enum TransactionType
+    public enum TransactionType
     {
         Credit,
         Debit
     }
-    class Transaction
+    public class Transaction
     {
         public int TransactionID { get; set; }
         

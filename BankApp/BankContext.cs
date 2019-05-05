@@ -5,14 +5,15 @@ using System.Text;
 
 namespace BankApp
 {
-    class BankContext : DbContext  
+    public class BankContext : DbContext  
     {
         public DbSet<Account> Accounts { get; set; }
         public DbSet<Transaction> Transactions { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = BankApp; Integrated Security = True; Connect Timeout = 30;");
+            //optionsBuilder.UseSqlServer(@"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = BankApp; Integrated Security = True; Connect Timeout = 30;");
+            optionsBuilder.UseSqlServer(@"Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = BankApp; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

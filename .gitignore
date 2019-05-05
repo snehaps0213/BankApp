@@ -6,3 +6,6 @@
 *.suo
 *.dll
 *.pdb
+[Bb]in/
+obj/
+.vs/

@@ -11,6 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using BankUI.Data;
 using BankUI.Models;
 using BankUI.Services;
+using BankApp;
 
 namespace BankUI
 {
@@ -26,8 +27,15 @@ namespace BankUI
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //services.AddDbContext<BankContext>();
+
             services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+               options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddTransient(typeof(BankContext));
+            //services.AddDbContext(typeof(BankContext))(options =>
+            //   options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+   //         services.AddDbContext<BankContext>(options =>
+   //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
