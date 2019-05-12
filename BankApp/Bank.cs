@@ -6,7 +6,7 @@ using System.Text;
 
 namespace BankApp
 {
-    static class Bank
+    public static class Bank
     {
         private static BankContext db = new BankContext();
 

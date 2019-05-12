@@ -15,9 +15,6 @@ namespace BankUI.Data
         {
         }
 
-        protected override void OnModelCreating(ModelBuilder builder)
-        {
-            
-        }
+
     }
 }

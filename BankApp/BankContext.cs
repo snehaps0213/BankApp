@@ -12,8 +12,11 @@ namespace BankApp
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            //org
             //optionsBuilder.UseSqlServer(@"Data Source = (localdb)\MSSQLLocalDB; Initial Catalog = BankApp; Integrated Security = True; Connect Timeout = 30;");
-            optionsBuilder.UseSqlServer(@"Data Source = (localdb)\\MSSQLLocalDB; Initial Catalog = BankApp; Integrated Security = True; Connect Timeout = 30; Encrypt = False; TrustServerCertificate = True; ApplicationIntent = ReadWrite; MultiSubnetFailover = False");
+            //parag
+            //optionsBuilder.UseSqlServer(@"Data Source = (localdb)\\mssqllocaldb; Initial Catalog = BankApp; Trusted_Connection=True; MultipleActiveResultSets=true");
+            optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=BankApp;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

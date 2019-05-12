@@ -25,7 +25,7 @@ namespace BankApp
         /// <summary>
         /// Unique number for account
         /// </summary>
-        public int AccountNumber { get; private set; }
+        public int AccountNumber { get; set; }
         /// <summary>
         /// Email address of the account holder
         /// </summary>

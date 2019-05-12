@@ -32,17 +32,14 @@ namespace BankUI
             services.AddDbContext<ApplicationDbContext>(options =>
                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
             services.AddTransient(typeof(BankContext));
-            //services.AddDbContext(typeof(BankContext))(options =>
-            //   options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-   //         services.AddDbContext<BankContext>(options =>
-   //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
             // Add application services.
-            services.AddTransient<IEmailSender, EmailSender>();
+           // services.AddTransient<IEmailSender, EmailSender>();
 
             services.AddMvc();
         }
